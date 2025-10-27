@@ -3,11 +3,9 @@
 int main() {
     int day;
 
-    // Input from user
     printf("Enter a number (1-7): ");
     scanf("%d", &day);
 
-    // Switch-case to display day of the week
     switch (day) {
         case 1:
             printf("Monday\n");

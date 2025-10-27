@@ -2,8 +2,8 @@
 #include <string.h>
 
 int main() {
-    char str[1000], word[100], surname[100];
-    int i = 0, j = 0, k = 0;
+    char str[1000], word[100];
+    int i = 0, j = 0;
     scanf(" %[^\n]", str);
     while (str[i] != '\0') {
         if (str[i] != ' ') {

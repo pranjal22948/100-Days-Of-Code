@@ -4,14 +4,11 @@
 int main() {
     float a, b, c, discriminant, root1, root2, realPart, imagPart;
 
-    // Input coefficients
     printf("Enter coefficients a, b and c: ");
     scanf("%f %f %f", &a, &b, &c);
 
-    // Calculate discriminant
     discriminant = b * b - 4 * a * c;
 
-    // Check the nature of the roots
     if (discriminant > 0) {
         root1 = (-b + sqrt(discriminant)) / (2 * a);
         root2 = (-b - sqrt(discriminant)) / (2 * a);

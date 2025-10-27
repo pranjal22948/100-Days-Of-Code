@@ -8,7 +8,13 @@ int main() {
         len++;
     for (int i = 0; i < len / 2; i++) {
         if (str[i] != str[len - i - 1]) {
-               else
+            flag = 0;
+            break;
+        }
+    }
+    if (flag)
+        printf("Yes\n");
+    else
         printf("No\n");
     return 0;
 }

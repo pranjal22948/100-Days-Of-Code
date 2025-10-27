@@ -1,11 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <limits.h>
 
 int main() {
     int n, k;
+    int *arr;
+    int i;
     scanf("%d %d", &n, &k);
-    int arr[n];
-    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+    arr = malloc(n * sizeof(int));
+    if (!arr) return 1;
+    for (i = 0; i < n; i++) scanf("%d", &arr[i]);
     int maxSum = INT_MIN;
     for (int i = 0; i <= n - k; i++) {
         int sum = 0;
@@ -13,5 +17,6 @@ int main() {
         if (sum > maxSum) maxSum = sum;
     }
     printf("%d\n", maxSum);
+    free(arr);
     return 0;
 }

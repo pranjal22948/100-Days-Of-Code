@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    long long num;
+    int num;
     int count[10] = {0};
 
     printf("Enter an integer number: ");
-    scanf("%lld", &num);
+    scanf("%d", &num);
 
     // Count digit frequencies
     while (num > 0) {

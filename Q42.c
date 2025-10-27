@@ -14,4 +14,6 @@ int main() {
     if (sum == n)
         printf("%d is a perfect number.\n", n);
     else
-        printf("%d is not a perfect
+        printf("%d is not a perfect number.\n", n);
+    return 0;
+}

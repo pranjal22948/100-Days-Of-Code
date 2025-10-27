@@ -1,10 +1,8 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main(void) {
     int n, original, sum = 0;
-    cout << "Enter a number: ";
-    cin >> n;
+    if (scanf("%d", &n) != 1) return 1;
     original = n;
 
     while (n > 0) {
@@ -14,9 +12,9 @@ int main() {
     }
 
     if (original == sum)
-        cout << "Armstrong number" << endl;
+        printf("Armstrong number\n");
     else
-        cout << "Not an Armstrong number" << endl;
+        printf("Not an Armstrong number\n");
 
     return 0;
 }

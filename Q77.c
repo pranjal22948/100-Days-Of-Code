@@ -3,7 +3,7 @@
 int main() {
     int n, flag = 1;
     scanf("%d", &n);
-    int matrix[n][n], diag[n], count = 0;
+    int matrix[n][n], diag[n];
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             scanf("%d", &matrix[i][j]);

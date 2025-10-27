@@ -1,30 +1,22 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main(void) {
     int n;
-    cout << "Enter a number: ";
-    cin >> n;
+    if (scanf("%d", &n) != 1) return 1;
 
     if (n == 0) {
-        cout << "Binary: 0" << endl;
+        printf("0\n");
         return 0;
     }
 
-    // Find the highest power of 2 less than or equal to n
     int highest = 1;
-    while (highest <= n)
-        highest <<= 1;
+    while (highest <= n) highest <<= 1;
     highest >>= 1;
 
-    cout << "Binary: ";
     while (highest > 0) {
-        if (n & highest)
-            cout << "1";
-        else
-            cout << "0";
+        putchar((n & highest) ? '1' : '0');
         highest >>= 1;
     }
-    cout << endl;
+    putchar('\n');
     return 0;
 }

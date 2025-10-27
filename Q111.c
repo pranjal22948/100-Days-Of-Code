@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
+int main(void) {
     int n, k;
-    scanf("%d", &n);
-    int arr[n];
+    if (scanf("%d", &n) != 1) return 1;
+    int *arr = malloc(n * sizeof *arr);
+    if (!arr) return 1;
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+        if (scanf("%d", &arr[i]) != 1) arr[i] = 0;
     }
-    scanf("%d", &k);
+    if (scanf("%d", &k) != 1) { free(arr); return 1; }
     for (int i = 0; i <= n - k; i++) {
         int found = 0;
         for (int j = i; j < i + k; j++) {
@@ -17,9 +19,9 @@ int main() {
                 break;
             }
         }
-        if (!found) {
-            printf("0 ");
-        }
+        if (!found) printf("0 ");
     }
+    printf("\n");
+    free(arr);
     return 0;
 }

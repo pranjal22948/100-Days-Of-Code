@@ -3,11 +3,9 @@
 int main() {
     char ch;
 
-    // Input from user
     printf("Enter a character: ");
     scanf("%c", &ch);
 
-    // Check if the character is a vowel or consonant
     if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
         // Convert uppercase to lowercase for simplicity
         if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' ||

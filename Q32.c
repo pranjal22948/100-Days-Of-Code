@@ -1,10 +1,8 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main(void) {
     int n, original, reversed = 0;
-    cout << "Enter a number: ";
-    cin >> n;
+    if (scanf("%d", &n) != 1) return 1;
     original = n;
 
     while (n > 0) {
@@ -14,9 +12,9 @@ int main() {
     }
 
     if (original == reversed)
-        cout << "Palindrome" << endl;
+        printf("Palindrome\n");
     else
-        cout << "Not a palindrome" << endl;
+        printf("Not a palindrome\n");
 
     return 0;
 }

@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    long long binary, onesComp = 0, place = 1;
+    int binary, onesComp = 0, place = 1;
     printf("Enter a binary number: ");
-    scanf("%lld", &binary);
+    scanf("%d", &binary);
 
     while (binary > 0) {
         int digit = binary % 10;
@@ -14,6 +14,6 @@ int main() {
         binary /= 10;
     }
 
-    printf("1's complement: %lld\n", onesComp);
+    printf("1's complement: %d\n", onesComp);
     return 0;
 }

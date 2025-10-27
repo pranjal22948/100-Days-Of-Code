@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     int n;
     scanf("%d", &n);
-    int arr[n], total = 0, left = 0;
+    int *arr = malloc(n * sizeof *arr);
+    if (!arr) return 1;
+    int total = 0, left = 0;
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
         total += arr[i];
@@ -16,5 +19,6 @@ int main() {
         left += arr[i];
     }
     printf("-1\n");
+    free(arr);
     return 0;
 }

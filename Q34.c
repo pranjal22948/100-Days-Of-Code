@@ -1,13 +1,11 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+int main(void) {
     int n, i, isPrime = 1;
-    cout << "Enter a number: ";
-    cin >> n;
+    if (scanf("%d", &n) != 1) return 1;
 
     if (n <= 1) {
-        cout << "Not a prime number" << endl;
+        printf("Not a prime number\n");
         return 0;
     }
 
@@ -19,9 +17,9 @@ int main() {
     }
 
     if (isPrime)
-        cout << "Prime number" << endl;
+        printf("Prime number\n");
     else
-        cout << "Not a prime number" << endl;
+        printf("Not a prime number\n");
 
     return 0;
 }

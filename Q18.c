@@ -3,11 +3,9 @@
 int main() {
     int percentage;
 
-    // Input from user
     printf("Enter your percentage (0-100): ");
     scanf("%d", &percentage);
 
-    // Validate input and assign grade
     if (percentage >= 0 && percentage <= 100) {
         if (percentage >= 90) {
             printf("Grade A\n");

@@ -3,16 +3,13 @@
 int main() {
     int side1, side2, side3;
 
-    // Input from user
     printf("Enter three sides of a triangle:\n");
     scanf("%d %d %d", &side1, &side2, &side3);
 
-    // Check for triangle validity first
     if ((side1 + side2 > side3) && 
         (side1 + side3 > side2) && 
         (side2 + side3 > side1)) {
 
-        // Classification
         if (side1 == side2 && side2 == side3) {
             printf("The triangle is Equilateral.\n");
         } else if (side1 == side2 || side2 == side3 || side1 == side3) {
