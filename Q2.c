@@ -13,7 +13,7 @@ int main()
 
     if (num2 != 0) 
     {
-        float quotient = (float)num1 / num2;
+        double quotient = (double)num1 / num2;
         printf("Sum: %d\n", sum);
         printf("Difference: %d\n", difference);
         printf("Product: %d\n", product);

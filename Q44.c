@@ -2,7 +2,7 @@
 
 int main() {
     int n, i;
-    float sum = 0.0;
+    double sum = 0.0;
     printf("Enter number of terms: ");
     scanf("%d", &n);
 
@@ -11,7 +11,7 @@ int main() {
         if (i == 1)
             sum += 1.0;
         else
-            sum += (float)num / den;
+            sum += (double)num / den;
         num += 2;
         den += 2;
     }

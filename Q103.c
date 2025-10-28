@@ -4,7 +4,7 @@
 int main() {
     int n;
     scanf("%d", &n);
-    int *arr = malloc(n * sizeof *arr);
+    int *arr = malloc((size_t)n * sizeof *arr);
     if (!arr) return 1;
     int total = 0, left = 0;
     for (int i = 0; i < n; i++) {

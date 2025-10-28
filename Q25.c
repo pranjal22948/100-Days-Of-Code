@@ -21,8 +21,8 @@ int main() {
             printf("%d * %d = %d\n", a, b, a * b);
             break;
         case '/':
-            if (b != 0)
-                printf("%d / %d = %.2f\n", a, b, (float)a / b);
+        if (b != 0)
+            printf("%d / %d = %.2f\n", a, b, (double)a / b);
             else
                 printf("Error: Division by zero!\n");
             break;

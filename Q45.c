@@ -2,13 +2,13 @@
 
 int main() {
     int n, i;
-    float sum = 0.0;
+    double sum = 0.0;
     printf("Enter number of terms: ");
     scanf("%d", &n);
 
     int num = 2, den = 3;
     for (i = 1; i <= n; ++i) {
-        sum += (float)num / den;
+    sum += (double)num / den;
         num += 2;
         den += 4;
     }

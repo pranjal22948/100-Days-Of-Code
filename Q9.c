@@ -3,20 +3,20 @@
 
 int main() 
 {
-    float principal, rate, time, simpleInterest, compoundInterest;
+    double principal, rate, time, simpleInterest, compoundInterest;
 
     printf("Enter Principal amount: ");
-    scanf("%f", &principal);
+    scanf("%lf", &principal);
 
     printf("Enter Rate of interest (in %%): ");
-    scanf("%f", &rate);
+    scanf("%lf", &rate);
 
     printf("Enter Time (in years): ");
-    scanf("%f", &time);
+    scanf("%lf", &time);
 
-    simpleInterest = (principal * rate * time) / 100;
+    simpleInterest = (principal * rate * time) / 100.0;
 
-    compoundInterest = principal * pow((1 + rate / 100), time) - principal;
+    compoundInterest = principal * pow((1.0 + rate / 100.0), time) - principal;
 
     printf("Simple Interest = %.2f\n", simpleInterest);
     printf("Compound Interest = %.2f\n", compoundInterest);

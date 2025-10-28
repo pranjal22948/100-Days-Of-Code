@@ -5,9 +5,8 @@
 int main() {
     int n, k;
     int *arr;
-    int i;
     scanf("%d %d", &n, &k);
-    arr = malloc(n * sizeof(int));
+    arr = malloc((size_t)n * sizeof(int));
     if (!arr) return 1;
     for (i = 0; i < n; i++) scanf("%d", &arr[i]);
     int maxSum = INT_MIN;
