@@ -7,10 +7,10 @@ int main() {
         int *nums, *left, *right, *result;
         int i;
         scanf("%d", &n);
-        nums = malloc(n * sizeof(int));
-        left = malloc(n * sizeof(int));
-        right = malloc(n * sizeof(int));
-        result = malloc(n * sizeof(int));
+    nums = malloc((size_t)n * sizeof(int));
+    left = malloc((size_t)n * sizeof(int));
+    right = malloc((size_t)n * sizeof(int));
+    result = malloc((size_t)n * sizeof(int));
         if (!nums || !left || !right || !result) {
             free(nums); free(left); free(right); free(result);
             return 1;

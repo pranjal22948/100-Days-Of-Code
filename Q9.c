@@ -6,13 +6,22 @@ int main()
     double principal, rate, time, simpleInterest, compoundInterest;
 
     printf("Enter Principal amount: ");
-    scanf("%lf", &principal);
+    if (scanf("%lf", &principal) != 1 || principal < 0) {
+        printf("Error: Please enter a non-negative principal amount\n");
+        return 1;
+    }
 
     printf("Enter Rate of interest (in %%): ");
-    scanf("%lf", &rate);
+    if (scanf("%lf", &rate) != 1 || rate < 0) {
+        printf("Error: Please enter a non-negative interest rate\n");
+        return 1;
+    }
 
     printf("Enter Time (in years): ");
-    scanf("%lf", &time);
+    if (scanf("%lf", &time) != 1 || time < 0) {
+        printf("Error: Please enter a non-negative time period\n");
+        return 1;
+    }
 
     simpleInterest = (principal * rate * time) / 100.0;
 

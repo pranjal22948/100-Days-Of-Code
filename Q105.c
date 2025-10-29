@@ -8,7 +8,7 @@ int main(void) {
 
     if (scanf("%d", &n) != 1 || n <= 0) return 1;
 
-    nums = malloc(n * sizeof(int));
+    nums = malloc((size_t)n * sizeof(int));
     if (!nums) return 1;
     for (i = 0; i < n; i++) {
         if (scanf("%d", &nums[i]) != 1) nums[i] = 0;

@@ -6,7 +6,7 @@ int main() {
     int *arr;
     int i, j;
     scanf("%d", &n);
-    arr = malloc(n * sizeof(int));
+    arr = malloc((size_t)n * sizeof(int));
     if (!arr) return 1;
     for (i = 0; i < n; i++) scanf("%d", &arr[i]);
     for (i = 0; i < n; i++) {

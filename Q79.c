@@ -32,10 +32,10 @@ int main(void) {
         return 0;
     }
 
-    int **matrix = malloc(rows * sizeof *matrix);
+    int **matrix = malloc((size_t)rows * sizeof *matrix);
     if (!matrix) return 1;
     for (int i = 0; i < rows; i++) {
-        matrix[i] = malloc(cols * sizeof *matrix[i]);
+        matrix[i] = malloc((size_t)cols * sizeof *matrix[i]);
         if (!matrix[i]) {
             for (int k = 0; k < i; k++) free(matrix[k]);
             free(matrix);

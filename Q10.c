@@ -5,7 +5,10 @@ int main()
     int totalSeconds, hours, minutes, seconds;
 
     printf("Enter time in seconds: ");
-    scanf("%d", &totalSeconds);
+    if (scanf("%d", &totalSeconds) != 1 || totalSeconds < 0) {
+        printf("Error: Please enter a non-negative number of seconds\n");
+        return 1;
+    }
 
     hours = totalSeconds / 3600;
     minutes = (totalSeconds % 3600) / 60;

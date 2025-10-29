@@ -5,10 +5,16 @@ int main()
     int a, b;
 
     printf("Enter the first number (a): ");
-    scanf("%d", &a);
+    if (scanf("%d", &a) != 1) {
+        printf("Error: Invalid input for first number\n");
+        return 1;
+    }
 
     printf("Enter the second number (b): ");
-    scanf("%d", &b);
+    if (scanf("%d", &b) != 1) {
+        printf("Error: Invalid input for second number\n");
+        return 1;
+    }
 
     a = a + b;
     b = a - b;

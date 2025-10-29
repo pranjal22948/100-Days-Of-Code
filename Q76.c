@@ -4,10 +4,10 @@
 int main() {
     int n, symmetric = 1;
     if (scanf("%d", &n) != 1) return 1;
-    int **matrix = malloc(n * sizeof *matrix);
+    int **matrix = malloc((size_t)n * sizeof *matrix);
     if (!matrix) return 1;
     for (int i = 0; i < n; i++) {
-        matrix[i] = malloc(n * sizeof *matrix[i]);
+    matrix[i] = malloc((size_t)n * sizeof *matrix[i]);
         if (!matrix[i]) {
             for (int k = 0; k < i; k++) free(matrix[k]);
             free(matrix);

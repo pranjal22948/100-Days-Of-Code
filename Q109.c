@@ -8,7 +8,7 @@ int main() {
     scanf("%d %d", &n, &k);
     arr = malloc((size_t)n * sizeof(int));
     if (!arr) return 1;
-    for (i = 0; i < n; i++) scanf("%d", &arr[i]);
+    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
     int maxSum = INT_MIN;
     for (int i = 0; i <= n - k; i++) {
         int sum = 0;
